@@ -50,6 +50,41 @@ var init = function() {
   window.addEventListener('scroll', scrollFx, false);
   window.addEventListener('load', scrollFx, false);
   $('a[href^="#"]').on('click',scrolly);
+
+  $(document).keydown(function(e) {
+      var hh = location.hash.split("#")[1]||1;
+      hh = parseInt(hh+"");
+      var hl = $(".panel").length;
+      switch(e.which) {
+          case 37: // left
+            if(hh>1){
+              location.hash = "#"+(hh-1);
+            }
+          break;
+
+          case 38: // up
+            if(hh>1){
+              location.hash = "#"+(hh-1);
+            }
+          break;
+
+          case 39: // right
+            if(hh<hl){
+              location.hash = "#"+(hh+1);
+            }
+          break;
+
+          case 40: // down
+            if(hh<hl){
+              location.hash = "#"+(hh+1);
+            }
+          break;
+
+          default: return; // exit this handler for other keys
+      }
+      e.preventDefault(); // prevent the default action (scroll / move caret)
+  });
+
 };
 
 doc.on('ready', init);
