@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Vertical Layout with Navigation</title>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link href='css/gf.css' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="nav" style="display:none">
+    <div class="burger">
+      <div class="burger__patty"></div>
+    </div>
+
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a href="#1" class="nav__link c-blue"><i class="fa fa-camera-retro"></i></a>
+      </li>
+      <li class="nav__item">
+        <a href="#2" class="nav__link c-yellow scrolly"><i class="fa fa-bolt"></i></a>
+      </li>
+      <li class="nav__item">
+        <a href="#3" class="nav__link c-red"><i class="fa fa-music"></i></a>
+      </li>
+      <li class="nav__item">
+        <a href="#4" class="nav__link c-green"><i class="fa fa-paper-plane"></i></a>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="panel b-white" id="1">
+    <article class="panel__wrapper">
+      <div class="panel__content">
+
+        <h1 class="panel__headline"><img src="img/cesar.svg" style="width: 140px;">&nbsp;Hi!</h1>
+        <div class="panel__block"></div>
+        <p>My name is Cesar Augusto</p>
+        <p>My lastname is Tapasco Arias, I have 25 years old and I'm married</p>
+        <p>My email is cethapgames@gmail.com</p>
+        <p>My cell phone number is 3105307094</p>
+        <p>I'm living in Cali, colombia Calle 13e #68-90 Manzana 2 Casa 12, Cali, Colombia</p>
+      </div>
+    </article>
+  </section>
+  <section class="panel b-yellow" id="2">
+    <article class="panel__wrapper">
+      <div class="panel__content">
+        <h1 class="panel__headline"><i class="fa fa-bolt"></i>&nbsp; I am a back-end and front-end web developer</h1>
+        <div class="panel__block"></div>
+        <p>I work with operative systems like linux distributions (Ubuntu, fedora, raspbian), Windows OS and Mac OSx.</p>
+        <p>I work with cloud systems like Heroku and Google cloud.</p>
+        <p>I develop mobile apps based on web technologies</p>
+      </div>
+    </article>
+  </section>
+  <section class="panel b-red" id="3">
+    <article class="panel__wrapper">
+      <div class="panel__content">
+        <h1 class="panel__headline"><i class="fa fa-music"></i>&nbsp;My Skills Are:</h1>
+        <div class="panel__block"></div>
+        <p>Plataforms and technologies of develop:</p>
+        <p>Angular.js, Node.js, nodewebkit, jQuery, wordpress</p>
+        <p>Databases:</p>
+        <p>MongoDB, Oracle, Mysql, PostgreSQL, SqlServer</p>
+      </div>
+    </article>
+  </section>
+  <section class="panel b-green" id="4">
+    <article class="panel__wrapper">
+      <div class="panel__content">
+        <h1 class="panel__headline"><i class="fa fa-paper-plane"></i>&nbsp;Laboral Experince</h1>
+        <div class="panel__block"></div>
+        <p>Innova Systems S.A.S:</p>
+        <p>Analyst Engineer 3 years time worked</p>
+        <p>unoraya.com:</p>
+        <p>Webmaster and web developer</p>
+      </div>
+    </article>
+  </section>
+  <script src='js/jquery.min.js'></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
