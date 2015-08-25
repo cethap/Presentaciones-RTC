@@ -2,7 +2,7 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>Cesar's Presentation</title>
+  <title>Servidor DHCP</title>
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link href='css/gf.css' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width">
@@ -14,7 +14,6 @@
     <div class="burger">
       <div class="burger__patty"></div>
     </div>
-
     <ul class="nav__list">
       <li class="nav__item">
         <a href="#1" class="nav__link c-blue"><i class="fa fa-camera-retro"></i></a>
@@ -34,49 +33,51 @@
   <section class="panel b-white" id="1">
     <article class="panel__wrapper">
       <div class="panel__content">
-
-        <h1 class="panel__headline"><img src="img/pinglesm.png" style="width: 152px;"><img src="img/cesar.svg" style="width: 140px;">&nbsp;Hi!</h1>
+        <h1 class="panel__headline"><img src="img/DHCP.png" style="width: 152px;"></h1>
         <div class="panel__block"></div>
-        <p>My name is Cesar Augusto</p>
-        <p>My lastname is Tapasco Arias, I have 25 years old and I'm married</p>
-        <p>My email is cethapgames@gmail.com</p>
-        <p>My cell phone number is 3105307094</p>
-        <p>I'm living in Cali, colombia Calle 13e #68-90 Manzana 2 Casa 12, Cali, Colombia</p>
+        <p>DHCP significa Protocolo de configuración de host dinámico . Es un protocolo que permite que un equipo conectado a una red pueda obtener su configuración (principalmente, su configuración de red) en forma dinámica (es decir, sin intervención particular). Sólo tiene que especificarle al equipo, mediante DHCP, que encuentre una dirección IP de manera independiente. El objetivo principal es simplificar la administración de la red.</p>
       </div>
     </article>
   </section>
   <section class="panel b-yellow" id="2">
     <article class="panel__wrapper">
       <div class="panel__content">
-        <h1 class="panel__headline"><i class="fa fa-bolt"></i>&nbsp; I am a back-end and front-end web developer</h1>
+        <h1 class="panel__headline"><i class="fa fa-bolt"></i>&nbsp; Funcionamiento del protocolo DHCP</h1>
         <div class="panel__block"></div>
-        <p>I work with operative systems like linux distributions (Ubuntu, fedora, raspbian), Windows OS and Mac OSx.</p>
-        <p>I work with cloud systems like Heroku and Google cloud.</p>
-        <p>I develop mobile apps based on web technologies</p>
+        <p>Primero, se necesita un servidor DHCP que distribuya las direcciones IP. Este equipo será la base para todas las solicitudes DHCP por lo cual debe tener una dirección IP fija. Por lo tanto, en una red puede tener sólo un equipo con una dirección IP fija: el servidor DHCP.</p>
       </div>
     </article>
   </section>
   <section class="panel b-red" id="3">
     <article class="panel__wrapper">
       <div class="panel__content">
-        <h1 class="panel__headline"><i class="fa fa-music"></i>&nbsp;My Skills Are:</h1>
+        <h1 class="panel__headline">Flujo y definiciones</h1>
         <div class="panel__block"></div>
-        <p>Plataforms and technologies of develop:</p>
-        <p>Angular.js, Node.js, nodewebkit, jQuery, wordpress</p>
-        <p>Databases:</p>
-        <p>MongoDB, Oracle, Mysql, PostgreSQL, SqlServer</p>
+        <p style="font-size:20px; font-weight: bold;">
+          DHCPDISCOVER (para ubicar servidores DHCP disponibles)
+          <br>
+          DHCPOFFER (respuesta del servidor a un paquete DHCPDISCOVER, que contiene los parámetros iniciales)
+          <br>
+          DHCPREQUEST (solicitudes varias del cliente, por ejemplo, para extender su concesión)
+          <br>
+          DHCPACK (respuesta del servidor que contiene los parámetros y la dirección IP del cliente)
+          <br>
+          DHCPNAK (respuesta del servidor para indicarle al cliente que su concesión ha vencido o si el cliente anuncia una configuración de red errónea)
+          <br>
+          DHCPDECLINE (el cliente le anuncia al servidor que la dirección ya está en uso)
+          <br>
+          DHCPRELEASE (el cliente libera su dirección IP)
+          <br>
+          DHCPINFORM (el cliente solicita parámetros locales, ya tiene su dirección IP)
       </div>
     </article>
   </section>
   <section class="panel b-green" id="4">
     <article class="panel__wrapper">
       <div class="panel__content">
-        <h1 class="panel__headline"><i class="fa fa-paper-plane"></i>&nbsp;Laboral Experince</h1>
+        <h1 class="panel__headline"><i class="fa fa-paper-plane"></i>&nbsp;Arquitectura</h1>
         <div class="panel__block"></div>
-        <p>Innova Systems S.A.S:</p>
-        <p>Analyst Engineer 3 years time worked</p>
-        <p>unoraya.com:</p>
-        <p>Webmaster and web developer</p>
+        <p><img src="img/arqutectura.png" alt=""></p>
       </div>
     </article>
   </section>
