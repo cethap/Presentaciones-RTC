@@ -35,49 +35,57 @@
       <div class="panel__content">
         <h1 class="panel__headline"><img src="img/DHCP.png" style="width: 152px;"></h1>
         <div class="panel__block"></div>
-        <p>DHCP significa Protocolo de configuración de host dinámico . Es un protocolo que permite que un equipo conectado a una red pueda obtener su configuración (principalmente, su configuración de red) en forma dinámica (es decir, sin intervención particular). Sólo tiene que especificarle al equipo, mediante DHCP, que encuentre una dirección IP de manera independiente. El objetivo principal es simplificar la administración de la red.</p>
+        <p>El protocolo de configuración dinámica de host (DHCP, Dynamic Host Configuration Protocol) es un estándar TCP/IP diseñado para simplificar la administración de la configuración IP de los equipos de nuestra red.</p>
+
+        <p>Si disponemos de un servidor DHCP, la configuración IP de los PCs puede hacerse de forma automática, evitando así la necesidad de tener que realizar manualmente uno por uno la configuración TCP/IP de cada equipo.</p>
       </div>
     </article>
   </section>
   <section class="panel b-yellow" id="2">
     <article class="panel__wrapper">
       <div class="panel__content">
-        <h1 class="panel__headline"><i class="fa fa-bolt"></i>&nbsp; Funcionamiento del protocolo DHCP</h1>
+        <h1 class="panel__headline"><i class="fa fa-bolt"></i>&nbsp; Datos de configuración</h1>
         <div class="panel__block"></div>
-        <p>Primero, se necesita un servidor DHCP que distribuya las direcciones IP. Este equipo será la base para todas las solicitudes DHCP por lo cual debe tener una dirección IP fija. Por lo tanto, en una red puede tener sólo un equipo con una dirección IP fija: el servidor DHCP.</p>
+        <p>
+          El servidor proporcionará al cliente al menos los siguientes parámetros:
+          <br>
+          <b>Dirección IP</b>
+          <br>
+          <b>Máscara de subred</b>
+          <br>
+          Opcionalmente, el servidor DHCP podrá proporcionar otros parámetros de configuración tales como:
+          <br>
+          <b><i>Puerta de enlace</i></b>
+          <br>
+          <b><i>Servidores DNS</i></b>
+          <br>
+          <b><i>Muchos otros parámetros más</i></b>
+        </p>
       </div>
     </article>
   </section>
   <section class="panel b-red" id="3">
     <article class="panel__wrapper">
       <div class="panel__content">
-        <h1 class="panel__headline">Flujo y definiciones</h1>
+        <h1 class="panel__headline">Flujo Básico</h1>
         <div class="panel__block"></div>
-        <p style="font-size:20px; font-weight: bold;">
-          DHCPDISCOVER (para ubicar servidores DHCP disponibles)
+        <p>
+          <img src="img/flujo.png">
+          <img src="img/arqutectura.png" alt="" style="width: 200px;">
           <br>
-          DHCPOFFER (respuesta del servidor a un paquete DHCPDISCOVER, que contiene los parámetros iniciales)
-          <br>
-          DHCPREQUEST (solicitudes varias del cliente, por ejemplo, para extender su concesión)
-          <br>
-          DHCPACK (respuesta del servidor que contiene los parámetros y la dirección IP del cliente)
-          <br>
-          DHCPNAK (respuesta del servidor para indicarle al cliente que su concesión ha vencido o si el cliente anuncia una configuración de red errónea)
-          <br>
-          DHCPDECLINE (el cliente le anuncia al servidor que la dirección ya está en uso)
-          <br>
-          DHCPRELEASE (el cliente libera su dirección IP)
-          <br>
-          DHCPINFORM (el cliente solicita parámetros locales, ya tiene su dirección IP)
+          El servidor DHCP proporciona una configuración de red TCP/IP segura y evita conflictos de direcciones 
+          repetidas. Utiliza un modelo cliente-servidor en el que el servidor DHCP mantiene una administración centralizada de las direcciones IP utilizadas en la red. Los clientes podrán solicitar al servidor una dirección IP y así poder integrarse en la red.
       </div>
     </article>
   </section>
   <section class="panel b-green" id="4">
     <article class="panel__wrapper">
       <div class="panel__content">
-        <h1 class="panel__headline"><i class="fa fa-paper-plane"></i>&nbsp;Arquitectura</h1>
+        <h1 class="panel__headline"><i class="fa fa-paper-plane"></i>&nbsp;Funcionamiento</h1>
         <div class="panel__block"></div>
-        <p><img src="img/arqutectura.png" alt=""></p>
+        <p>
+          El servidor solo asigna direcciones dentro de un rango prefijado. Si por error hemos configurado manualmente una IP estática perteneciente al rango gestionado por nuestro servidor DHCP, podría ocurrir que dicha dirección sea asignada dinámicamente a otro PC, provocándose un conflicto de IP. En ese caso el cliente solicitará y comprobará, otra dirección IP, hasta que obtenga una dirección IP que no esté asignada actualmente a ningún otro equipo de nuestra red.
+        </p>
       </div>
     </article>
   </section>
